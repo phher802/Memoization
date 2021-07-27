@@ -10,10 +10,10 @@
 
 //w/o memoiztion
 
-function Building(tasks){
-    console.log("Dispatch to Depot!");
-    return tasks + "The work is complete.";
-}
+// function Building(tasks){
+//     console.log("Dispatch to Depot!");
+//     return tasks + "The work is complete.";
+// }
 
 //with memoiztion 
 
@@ -34,3 +34,17 @@ console.log('Day 1: ', Building("Bob's log: "));
 console.log('Day 2: ', Building("Bob's log: "));
 console.log('Day 3: ', Building("Bob's log: "));
 
+//with memoization, bob no longer has to dispatch each time to pick up the required
+//tools to pick up the broken pipes as they're locallly stored and he now can access
+//them more quickly
+//if bob takes a sick day on tuesday and we send susy, a different employee, then the results
+//will change:
+
+console.log('Day 1: ', Building("Bob's log: "));
+console.log('Day 2: ', Building("Susy's log: "));
+console.log('Day 3: ', Building("Bob's log: "));
+
+//since the input is not the same, susy has no prior storage in teh cache object 
+//so the dispatch log is once again initialized.
+//th eday 3 log, however, does not need to log the dispatch because it is logging Bob
+//and can just fetch the data in the cache.
