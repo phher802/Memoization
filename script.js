@@ -8,6 +8,8 @@
 //javascript execution commands will be traced by a reference to your construction 
 //companies employees: Bob and Susy.
 
+//run the index.html in the browser and check dev tools for the results.
+
 //w/o memoiztion
 
 // function Building(tasks){
@@ -16,6 +18,10 @@
 // }
 
 //with memoiztion 
+//write if else condidtion to check if tasks have been sent to the object cache as an array
+//if the cache has received tasks then only return the tasks that need to be complete
+//otherwise log the string 'Dispatch To Depot!' again and return the cache with tasks equal
+//to the original concatenated string, 'The work is complete.'
 
 let cache = {};
 
